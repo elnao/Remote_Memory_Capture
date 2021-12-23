@@ -5,8 +5,10 @@
 #  Prerequisite: Run script as account that is admin on remote machine;
 #                  Run from C:\stage\Memory_Capture folder; Winpmem.exe and 7za.exe must be in this folder;
 #################################################################################################################
- 
 
+# Speed up Copy-Item operations
+$ProgressPreference = "SilentlyContinue"
+ 
 # Create Timestamp and remote powershell session.
 $MemoryCaptureStartDate = (Get-Date -Format FileDateTimeUniversal)
 
